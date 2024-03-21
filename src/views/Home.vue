@@ -6,8 +6,8 @@ import SubNavbar from "../components/navigation/subnavbar.vue";
 
 <template>
 	<v-app>
-		<Navbar></Navbar>
-		<!-- <SubNavbar></SubNavbar> -->
+		<Navbar/>
+		<SubNavbar/>
 	</v-app>
 </template>
   
