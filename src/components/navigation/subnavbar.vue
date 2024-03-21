@@ -1,10 +1,8 @@
 <script setup>
 </script>
 <template>
-  <div class="bg-grey-darken-4">
-    <div class="max-w-screen-2xl mx-auto">
-    <v-toolbar class="text-white">
-      <div class="px-8 py-5">
+    <v-toolbar class="bg-grey-darken-4 text-white">
+    <div class="max-w-screen-2xl mx-auto w-full">
           <v-btn icon>
             <v-icon size="large">mdi-account</v-icon>
           </v-btn>
@@ -13,7 +11,6 @@
           </v-btn>
         </div>
     </v-toolbar>
-  </div>
 
     <!-- <nav class="container">
       <div class="flex">
@@ -22,5 +19,4 @@
         </router-link>
       </div>
     </nav> -->
-  </div>
 </template>
