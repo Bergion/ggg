@@ -11,7 +11,7 @@ const items = ref([
     <div class="max-w-screen-2xl mx-auto w-full px-8">
       <v-menu open-on-hover>
         <template v-slot:activator="{ props }">
-          <v-btn height="100" flat prepend-icon="mdi-menu" v-bind="props">Категории</v-btn>
+          <v-btn height="64" flat prepend-icon="mdi-menu" v-bind="props">Категории</v-btn>
         </template>
         <v-list>
           <v-list-item
