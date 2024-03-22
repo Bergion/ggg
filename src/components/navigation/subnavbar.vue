@@ -2,8 +2,15 @@
 import { ref } from 'vue';
 
 const items = ref([
-  { title: "Категория 1"},
-  { title: "Категория 2"},
+  { title: "Главная"},
+  { title: "Оплата"},
+  { title: "Доставка"},
+  { title: "Гарантия"},
+  { title: "Контакты"},
+]);
+
+const categories = ref([
+  { title: "Генераторы"},
 ])
 </script>
 <template>
@@ -15,7 +22,7 @@ const items = ref([
         </template>
         <v-list>
           <v-list-item
-            v-for="(item, index) in items"
+            v-for="(item, index) in categories"
             :key="index"
           >
             <v-btn class="h-full" density="default">
@@ -24,6 +31,14 @@ const items = ref([
           </v-list-item>
         </v-list>
       </v-menu>
+      <v-btn 
+        v-for="(item, index) in items"
+        :key="index"
+        height="64"
+        flat 
+      > 
+        {{ item.title }}
+      </v-btn>
     </div>
   </v-toolbar>
 </template>
