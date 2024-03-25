@@ -2,8 +2,6 @@
 </script>
 
 <template>
-  <main>
-    <router-view />
-  </main>
+  <RouterView/>
 </template>
 

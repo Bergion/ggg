@@ -1,13 +1,11 @@
 <script lang="ts" setup>
-import Navbar from "../components/navigation/navbar.vue";
-import SubNavbar from "../components/navigation/subnavbar.vue";
-
 </script>
 
 <template>
-	<v-app>
-		<Navbar/>
-		<SubNavbar/>
-	</v-app>
+	<v-container fluid>
+		<v-row class="max-w-screen-2xl mx-auto w-full px-8">
+			<div> zhopa </div>
+		</v-row>
+	</v-container>
 </template>
   
