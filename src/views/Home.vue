@@ -6,7 +6,7 @@
 <template>
 	<v-container class="px-0 py-8" fluid>
 		<v-row class="max-w-screen-2xl mx-auto w-full px-4 h-50">
-			<v-col sm="8" cols="12">
+			<v-col md="8" cols="12">
 				<v-card
 					class="mx-auto"
 				>
@@ -21,7 +21,7 @@
 					</v-carousel>
 				</v-card>
 			</v-col> 
-			<v-col sm="4">
+			<v-col lg="4">
 				<div class="flex flex-col h-full">
 					<Banner class="mb-8"/>
 					<Banner/>
