@@ -11,7 +11,6 @@
 					class="mx-auto"
 				>
 					<v-carousel
-						height="600"
 						show-arrows="hover"
 						cycle
 						hide-delimiter-background
@@ -22,7 +21,10 @@
 				</v-card>
 			</v-col> 
 			<v-col sm="4">
-				<Banner/>
+				<div>
+					<Banner/>
+					<Banner/>
+				</div>
 			</v-col> 
 		</v-row>
 	</v-container>

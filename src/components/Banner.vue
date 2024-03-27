@@ -7,30 +7,31 @@
 </script>
 
 <template>
-  <v-card
-    class="banner-wrapper"
-  >
-  <v-img :src="src">
-  </v-img>
-    <template v-slot:title>
-      This is a title
-    </template>
+  <v-card class="banner-wrapper w-full h-full" :image="src">
+    <div class="d-flex flex-no-wrap justify-space-between px-6 py-8">
+      <div>
+        <v-card-title class="text-h5">
+          Supermodel
+        </v-card-title>
 
-    <v-card-text>
-      This is content
-    </v-card-text>
+        <v-card-subtitle>Foster the People</v-card-subtitle>
+
+        <v-card-actions>
+          <v-btn
+            class="ms-2"
+            size="small"
+            variant="outlined"
+          >
+            START RADIO
+          </v-btn>
+        </v-card-actions>
+      </div>
+    </div>
   </v-card>
 </template>
 <style>
-.banner-wrapper {
-  overflow: hidden;
-  img {
-    object-fit: fill;
-    transition: all 0.2s ease-in;
-    transform: scale(1.0);
-    &:hover {
-      transform: scale(1.1);
-    }
+  .banner-wrapper:hover .v-img {
+    transition-duration: 300ms;
+    transform: translateX(-50px);
   }
-}
 </style>
