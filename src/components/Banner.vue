@@ -30,8 +30,13 @@
   </v-card>
 </template>
 <style>
-  .banner-wrapper:hover .v-img {
-    transition-duration: 300ms;
-    transform: translateX(-50px);
+  .banner-wrapper {
+    & .v-img {
+      transition-duration: 300ms;
+    }
+    &:hover .v-img {
+      transition-duration: 300ms;
+      transform: translateX(-50px);
+    }
   }
 </style>
