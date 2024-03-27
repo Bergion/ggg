@@ -1,15 +1,17 @@
 <script lang="ts" setup>
+	import Banner from "@/components/Banner.vue";
+
 </script>
 
 <template>
-	<v-container class="px-4" fluid>
-		<v-row class="max-w-screen-2xl mx-auto w-full">
+	<v-container class="px-0 py-8" fluid>
+		<v-row class="max-w-screen-2xl mx-auto w-full px-4">
 			<v-col sm="8" cols="12">
 				<v-card
 					class="mx-auto"
 				>
 					<v-carousel
-						height="400"
+						height="600"
 						show-arrows="hover"
 						cycle
 						hide-delimiter-background
@@ -20,18 +22,7 @@
 				</v-card>
 			</v-col> 
 			<v-col sm="4">
-				<v-card
-					class="mx-auto"
-					prepend-icon="mdi-home"
-				>
-					<template v-slot:title>
-						This is a title
-					</template>
-
-					<v-card-text>
-						This is content
-					</v-card-text>
-				</v-card>
+				<Banner/>
 			</v-col> 
 		</v-row>
 	</v-container>
