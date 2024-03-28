@@ -1,9 +1,12 @@
-<script setup>
-  import { ref } from 'vue';
+<script lang="ts" setup>
+const props = defineProps({
+  title: String,
+  subtitle: String,
+  src: String,
+  btnText: String,
+  btnPath: String
+});
 
-  const title = ref("Title");
-  const description = ref("Description");
-  const src = ref("https://demothemedh.b-cdn.net/rbpazt/wp-content/uploads/2021/08/h3_banner-1.jpeg");
 </script>
 
 <template>
@@ -11,11 +14,13 @@
     <div class="px-6 py-8 h-full">
       <div class="flex flex-col justify-space-between h-full">
         <div>
-          <v-card-title class="text-h5">
-            Supermodel
+          <v-card-title>
+            <span class="text-4xl font-bold">{{ title }}</span>
           </v-card-title>
 
-          <v-card-subtitle>Foster the People</v-card-subtitle>
+          <v-card-subtitle>
+            <span class="text-bases">{{ subtitle }}</span>
+          </v-card-subtitle>
         </div>
         <v-card-actions>
           <v-btn
@@ -23,8 +28,9 @@
             size="x-large"
             width="160"
             elevation="4"
+            :to="btnPath"
           >
-            <span class="text-xs font-semibold">Shop now</span>
+            <span class="text-xs font-semibold">{{ btnText }}</span>
           </v-btn>
         </v-card-actions>
       </div>
@@ -32,18 +38,17 @@
   </v-card>
 </template>
 <style>
-  .v-card__image {
-    width: calc(100% + 50px);
+.v-card__image {
+  width: calc(100% + 50px);
+}
+.banner-wrapper {
+  & img {
+    object-fit: cover;
+    transition-duration: 300ms;
   }
-  .banner-wrapper {
-    & img {
-      object-fit: cover;
-      transition-duration: 300ms;
-    }
-    &:hover img {
-      transform: translateX(-50px);
-      transition-duration: 300ms;
-      /* transform: translateX(-50px); */
-    }
+  &:hover img {
+    transform: translateX(-50px);
+    transition-duration: 300ms;
   }
+}
 </style>
