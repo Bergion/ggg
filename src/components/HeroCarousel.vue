@@ -1,4 +1,9 @@
 <script lang="ts" setup>
+import { computed } from 'vue';
+const propd = defineProps({
+  slides: Array
+});
+
 </script>
 
 <template>
@@ -13,10 +18,13 @@
       continuous
       height="600"
     >
-      <v-carousel-item position="100% 150px" src="https://demothemedh.b-cdn.net/rbpazt/wp-content/uploads/2021/08/rev_home3.png">
-          <div class="relative d-flex flex-col w-1/2 ustify-space-between h-full">
-            <div class="text-h2">
-              Text
+      <v-carousel-item v-for="(slide, index) in slides" 
+        :key="index" 
+        position="100% 150px" 
+        :src="slide.src">
+          <div class="relative d-flex flex-col justify-space-around w-1/2 ml-[10%] h-full">
+            <div class="text-5xl mb-10 font-bold">
+              {{ slide.text }}
             </div>
             <v-btn
             class="mb-2 rounded bg-grey"
@@ -24,11 +32,10 @@
             width="160"
             elevation="4"
           >
-            <span class="text-xs font-semibold">Discover Now</span>
+            <span class="text-xs font-semibold">{{ slide.btnText }}</span>
           </v-btn>
         </div>
       </v-carousel-item>
-      <v-carousel-item position="100% 150px" src="https://demothemedh.b-cdn.net/rbpazt/wp-content/uploads/2021/08/rev_home1.png"/>
     </v-carousel>
   </v-sheet>
 
@@ -36,6 +43,6 @@
 
 <style>
   .v-carousel-item .v-img {
-  height: calc(100% + 150px);
+  height: calc(100%);
 }
 </style>
