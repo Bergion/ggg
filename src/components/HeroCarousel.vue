@@ -42,7 +42,11 @@ const propd = defineProps({
 </template>
 
 <style>
-  .v-carousel-item .v-img {
+.v-carousel__controls {
+  color: black
+}
+
+.v-carousel-item .v-img {
   height: calc(100%);
 }
 </style>
