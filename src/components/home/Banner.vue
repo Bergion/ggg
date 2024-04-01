@@ -6,7 +6,8 @@ const props = defineProps({
   btnText: String,
   btnPath: String,
   height: String,
-  minHeight: String
+  minHeight: String,
+  elevation: Number
 });
 
 </script>
@@ -15,7 +16,8 @@ const props = defineProps({
   <v-card class="banner-wrapper w-full h-full" 
     :min-height="minHeight"
     :height="height"
-    :image="src">
+    :image="src"
+    :elevation="elevation">
     <div class="px-6 py-8 h-full">
       <div class="flex flex-col justify-space-between h-full">
         <div>
