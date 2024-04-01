@@ -1,7 +1,8 @@
 <script lang="ts" setup>
-import { ref, reactive } from 'vue'
-import Banner from "@/components/Banner.vue";
-import HeroCarousel from "@/components/HeroCarousel.vue";
+import { ref } from 'vue'
+import Banner from "@/components/home/Banner.vue";
+import HeroCarousel from "@/components/home/HeroCarousel.vue";
+import CategoryList from "@/components/home/CategoryList.vue";
 
 const slides = ref([
 	{
@@ -15,33 +16,50 @@ const slides = ref([
 		btnText: "Discover now",
 	}
 ]);
+
+const banners = ref([
+	{
+		title: "Title",
+		subtitle: "Subtitle",
+		src: "https://demothemedh.b-cdn.net/rbpazt/wp-content/uploads/2021/08/h3_banner-1.jpeg",
+		btnText: "Shop now",
+		btnPath: "/"
+	},
+	{
+		title: "Title",
+		subtitle: "Subtitle",
+		src: "https://demothemedh.b-cdn.net/rbpazt/wp-content/uploads/2021/08/h3_banner-1.jpeg",
+		btnText: "Shop now",
+		btnPath: "/"
+	}
+])
 </script>
 
 <template>
-	<v-container class="px-0 py-8" fluid>
-		<v-row class="max-w-screen-2xl mx-auto w-full px-4 h-50">
+	<v-container class="py-8 max-w-screen-2xl mx-auto w-full px-8" fluid>
+		<v-row>
 			<v-col md="8" cols="12">
 				<HeroCarousel :slides="slides"/>
 			</v-col> 
 			<v-col lg="4">
 				<div class="flex flex-col h-full">
-					<Banner 
+					<Banner
+						v-for="(banner, index) in banners"
+						:key="index" 
 						class="mb-8" 
-						title="Title"
-						subtitle="Subtitle"
-						src="https://demothemedh.b-cdn.net/rbpazt/wp-content/uploads/2021/08/h3_banner-1.jpeg"
-						btnText="Shop now"
-						btnPath="/"
-					/>
-					<Banner 
-						class="mb-8" 
-						title="Title"
-						subtitle="Subtitle"
-						src="https://demothemedh.b-cdn.net/rbpazt/wp-content/uploads/2021/08/h3_banner-1.jpeg"
-						btnText="Shop now"
+						:title="banner.title"
+						:subtitle="banner.subtitle"
+						:src="banner.src"
+						:btnText="banner.btnText"
+						:btnPath="banner.btnPath"
 					/>
 				</div>
 			</v-col> 
+		</v-row>
+		<v-row>
+			<v-col cols="12">
+				<CategoryList :categories="[{name: 'Tires'}, {name: 'Engines'}]"/>
+			</v-col>
 		</v-row>
 	</v-container>
 </template>
