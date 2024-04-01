@@ -4,13 +4,18 @@ const props = defineProps({
   subtitle: String,
   src: String,
   btnText: String,
-  btnPath: String
+  btnPath: String,
+  height: String,
+  minHeight: String
 });
 
 </script>
 
 <template>
-  <v-card class="banner-wrapper w-full h-full min-h-[285px]" :image="src">
+  <v-card class="banner-wrapper w-full h-full" 
+    :min-height="minHeight"
+    :height="height"
+    :image="src">
     <div class="px-6 py-8 h-full">
       <div class="flex flex-col justify-space-between h-full">
         <div>

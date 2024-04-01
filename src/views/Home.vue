@@ -3,6 +3,7 @@ import { ref } from 'vue'
 import Banner from "@/components/home/Banner.vue";
 import HeroCarousel from "@/components/home/HeroCarousel.vue";
 import CategoryList from "@/components/home/CategoryList.vue";
+import FeaturedProducts from "@/components/home/FeaturedProducts.vue";
 
 const slides = ref([
 	{
@@ -32,7 +33,35 @@ const banners = ref([
 		btnText: "Shop now",
 		btnPath: "/"
 	}
-])
+]);
+
+const featuredProducts = ref([
+	{
+		categoryName: 'Starters',
+		name: "Starter",
+		src: "https://demothemedh.b-cdn.net/rbpazt/wp-content/uploads/2021/08/h3_banner-1.jpeg",
+	},
+	{
+		categoryName: 'Starters',
+		name: "Starter",
+		src: "https://demothemedh.b-cdn.net/rbpazt/wp-content/uploads/2021/08/h3_banner-1.jpeg",
+	},
+	{
+		categoryName: 'Starters',
+		name: "Starter",
+		src: "https://demothemedh.b-cdn.net/rbpazt/wp-content/uploads/2021/08/h3_banner-1.jpeg",
+	},
+	{
+		categoryName: 'Starters',
+		name: "Starter",
+		src: "https://demothemedh.b-cdn.net/rbpazt/wp-content/uploads/2021/08/h3_banner-1.jpeg",
+	},
+	{
+		categoryName: 'Starters',
+		name: "Starter",
+		src: "https://demothemedh.b-cdn.net/rbpazt/wp-content/uploads/2021/08/h3_banner-1.jpeg",
+	},
+]);
 </script>
 
 <template>
@@ -52,13 +81,19 @@ const banners = ref([
 						:src="banner.src"
 						:btnText="banner.btnText"
 						:btnPath="banner.btnPath"
+						height="285"
 					/>
 				</div>
 			</v-col> 
 		</v-row>
 		<v-row>
 			<v-col cols="12">
-				<CategoryList :categories="[{name: 'Tires'}, {name: 'Engines'}]"/>
+				<CategoryList :categories="[{name: 'Tires'}, {name: 'Engines'}, {name: 'Starters'}, {name: 'Generators'}]"/>
+			</v-col>
+		</v-row>
+		<v-row>
+			<v-col cols="12">
+				<FeaturedProducts :products="featuredProducts"/>
 			</v-col>
 		</v-row>
 	</v-container>
