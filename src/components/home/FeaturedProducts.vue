@@ -20,7 +20,7 @@ const featuredProducts = computed(() => {
 })
 </script>
 <template>
-  <v-container class="ma-0 pa-0 max-w-full" fluid>
+  <v-container class="ma-0 pa-0 max-w-full mt-8" fluid>
     <v-row>
       <v-col cols="12" md="6">
         <span class="text-3xl font-bold">Best Seller</span>
@@ -43,11 +43,12 @@ const featuredProducts = computed(() => {
         <v-row>
           <v-col v-for="(product, index) in products"
             :key="index"
-            cols="12" xs="12" sm="6" md="4">
+            cols="12" xs="12" sm="4">
             {{ console.log(product.categoryName) }}
             <ProductCard
               :category-name="product.categoryName"
-              :name="product.name"/>
+              :name="product.name"
+              :price="product.price"/>
           </v-col>
         </v-row>
       </v-col>

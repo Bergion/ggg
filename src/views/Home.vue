@@ -35,33 +35,14 @@ const banners = ref([
 	}
 ]);
 
-const featuredProducts = ref([
+const featuredProducts = ref(Array(6).fill(
 	{
 		categoryName: 'Starters',
 		name: "Starter",
 		src: "https://demothemedh.b-cdn.net/rbpazt/wp-content/uploads/2021/08/h3_banner-1.jpeg",
-	},
-	{
-		categoryName: 'Starters',
-		name: "Starter",
-		src: "https://demothemedh.b-cdn.net/rbpazt/wp-content/uploads/2021/08/h3_banner-1.jpeg",
-	},
-	{
-		categoryName: 'Starters',
-		name: "Starter",
-		src: "https://demothemedh.b-cdn.net/rbpazt/wp-content/uploads/2021/08/h3_banner-1.jpeg",
-	},
-	{
-		categoryName: 'Starters',
-		name: "Starter",
-		src: "https://demothemedh.b-cdn.net/rbpazt/wp-content/uploads/2021/08/h3_banner-1.jpeg",
-	},
-	{
-		categoryName: 'Starters',
-		name: "Starter",
-		src: "https://demothemedh.b-cdn.net/rbpazt/wp-content/uploads/2021/08/h3_banner-1.jpeg",
-	},
-]);
+		price: 1000
+	})
+);
 </script>
 
 <template>

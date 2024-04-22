@@ -7,7 +7,7 @@ const props = defineProps({
   btnPath: String,
   height: String,
   minHeight: String,
-  elevation: Number
+  elevation: String
 });
 
 </script>
