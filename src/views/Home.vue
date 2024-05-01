@@ -46,8 +46,8 @@ const featuredProducts = ref(Array(6).fill(
 </script>
 
 <template>
-	<v-container class="py-8 max-w-screen-2xl mx-auto w-full px-8" fluid>
-		<v-row>
+	<v-container class="py-8 home-container" fluid>
+		<v-row class="max-w-screen-2xl mx-auto w-full">
 			<v-col md="8" cols="12">
 				<HeroCarousel :slides="slides"/>
 			</v-col> 
@@ -67,12 +67,12 @@ const featuredProducts = ref(Array(6).fill(
 				</div>
 			</v-col> 
 		</v-row>
-		<v-row>
+		<v-row class="max-w-screen-2xl mx-auto w-full">
 			<v-col cols="12">
 				<CategoryList :categories="[{name: 'Tires'}, {name: 'Engines'}, {name: 'Starters'}, {name: 'Generators'}]"/>
 			</v-col>
 		</v-row>
-		<v-row>
+		<v-row class="max-w-screen-2xl mx-auto w-full">
 			<v-col cols="12">
 				<FeaturedProducts :products="featuredProducts"/>
 			</v-col>
