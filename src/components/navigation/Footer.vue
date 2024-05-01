@@ -9,16 +9,14 @@ const contactDetails = ref({
 </script>
 <template>
 	<v-footer class="max-w-screen-2xl mx-auto w-full">
-		<v-row class="pt-12">
-			<v-col cols="12" sm="6" md="3">
+		<v-row class="pt-10">
+			<v-col cols="12" sm="6" md="3"> 
 				<router-link class="" to="/">
         	<v-img src="src/assets/logo-black.svg" width="50%"></v-img>
       	</router-link>
-				<v-list lines="one">
-					<v-list-item class="text-xl" :title="contactDetails['phone']"></v-list-item>
-					<v-list-item :title="value"></v-list-item>
-					<v-list-item :title="value"></v-list-item>
-				</v-list>
+				<div class="text-2xl mt-8">{{ contactDetails['phone'] }}</div>
+				<div class="text-lg mt-6">{{ contactDetails['address'] }}</div>
+				<div class="text-lg mt-6">{{ contactDetails['telegram'] }}</div>
 				
 			</v-col>
 			<v-col cols="12" sm="6" md="3">

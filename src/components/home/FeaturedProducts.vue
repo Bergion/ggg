@@ -20,7 +20,7 @@ const featuredProducts = computed(() => {
 })
 </script>
 <template>
-  <v-container class="ma-0 pa-0 max-w-full mt-8" fluid>
+  <v-container class="ma-0 pa-0 max-w-full mt-12" fluid>
     <v-row>
       <v-col cols="12" md="6">
         <span class="text-3xl font-bold">Best Seller</span>
