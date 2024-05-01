@@ -37,7 +37,7 @@ const categories = ref([
             @click:append-inner="() => loading = !loading"
           ></v-text-field>
         </v-col>
-        <v-col class="self-center" sm="1">
+        <v-col class="flex self-center" sm="1">
           <v-btn icon>
             <v-icon size="large">mdi-account</v-icon>
           </v-btn>
